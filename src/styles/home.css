@@ -1,0 +1,122 @@
+.hero__section {
+    background: var(--hero-bg);
+}
+
+.hero__section h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 20px 0px;
+}
+
+.hero__section p {
+    color: var(--primary-color);
+    line-height: 28px;
+}
+
+.hero__section p:nth-child(1) {
+    font-weight: 500;
+}
+
+.buy__btn {
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 40px;
+}
+
+.buy__btn a:hover {
+    color: #fff;
+
+}
+
+.hero__content {
+    padding-top: 45px;
+}
+
+.trending__products {
+    padding: 20px;
+}
+
+.best_sales {
+    padding: 20px;
+}
+
+.timer__count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primary-color);
+    height: 400px;
+}
+
+.timer__count img {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    width: 25% !important;
+    height: 45% !important;
+    object-fit: contain;
+
+}
+
+.store__btn {
+    background: #fff;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.store__btn a:hover {
+    color: var(--primary-color);
+}
+
+.new__arrivals {
+    padding: 30px;
+}
+
+.popular__category {
+    padding: 20px;
+}
+
+@media only screen and (max-width: 992px) {
+    .hero__content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero__content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero__content p {
+        font-size: 1rem;
+    }
+
+    .buy__btn {
+        font-size: 0.9rem;
+       margin-bottom: 40px;
+    }
+}
+    @media only screen and (max-width: 576px) {
+        .hero__content {
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+}
+
+@media only screen and (max-width: 424px) {
+    .hero__section {
+        width: 100%;
+        height: 100%;
+        /* padding: 40px;
+        margin-bottom: 40px; */
+    }
+
+}
