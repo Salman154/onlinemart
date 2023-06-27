@@ -124,32 +124,32 @@ const Header = () => {
                                 <div className="profile">
                                     <motion.img
                                         whileTap={{ scale: 1.2 }}
-                                        // src={currentUser ? currentUser.photoURL : userIcon} alt=""
-                                        // onClick={toggleProfileActions} 
+                                        src={currentUser ? currentUser.photoURL : userIcon} alt=""
+                                        onClick={toggleProfileActions} 
                                     />
                                 
-                                    <div 
+                                  <div 
                                         className="profile__actions"
-                                        // ref={profileActionRef}
-                                        // onClick={toggleProfileActions}
+                                        ref={profileActionRef}
+                                        onClick={toggleProfileActions}
                                     > 
                                             
-                                                {/* <span onClick={logout}>Logout
-                                                </span>  */}
-                                                {/* <div>
+                                                <span onClick={logout}>Logout
+                                                </span> 
+                                                 <div>
                                                 <Link to="/signup">Signup</Link> 
                                                 <Link to="/login">Login</Link>
                                                 <Link to="/dashboard">Dashboard</Link>
-                                                </div>             */}
+                                                </div>            
                                             
                                     </div>                           
                                     </div>
                                 
-                                    {/* <div className="mobile__menu">
+                                    <div className="mobile__menu">
                                         <span onClick={menuToggle}>
                                             <i class="ri-menu-line"></i>
                                         </span>
-                                    </div> */}
+                                    </div> 
                            </div>
                  </div>
                 </Row> 

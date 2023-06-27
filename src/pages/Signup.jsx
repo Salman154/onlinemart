@@ -33,16 +33,14 @@ const Signup = () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
 
-      const user = userCredential.user;
-      const storageRef = ref(storage, `images/${Date.now() + username}`);
+      const user = await userCredential.user;
+      const storageRef = ref(storage, `images/${ Date.now() + username}`);
       const uploadTask = uploadBytesResumable(storageRef, file);
 
       uploadTask.on((error) => {
         toast.error(error.message)
-      }, 
-      () => {
-        getDownloadURL(uploadTask.snapshot.ref)
-        .then(async (downloadURL) => {
+      }, () => {
+        getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
 
           // update user profile
           await updateProfile(user, {
@@ -59,7 +57,7 @@ const Signup = () => {
           });
         });
       }
-      );
+    );
 
       setLoading(false);
       toast.success('Account created');
@@ -68,7 +66,7 @@ const Signup = () => {
     } catch (error) {
       setLoading(false);
       toast.error("somthing went wrong!");
-    }
+    }  
 
   }
   
